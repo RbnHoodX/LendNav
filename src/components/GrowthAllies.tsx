@@ -1,76 +1,134 @@
+import RightImage from "../assets/Lightbox_Sign_Mockup.png";
+import Allies from "../assets/allies.png";
+import Curve from "../assets/curve.png";
+import Curve2 from "../assets/curve2.png";
 
 const GrowthAllies = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-gray-900 text-white">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center bg-lendnow-600 bg-opacity-30 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <span>Growth Allies</span>
+    <section id="about" className="py-10">
+      <div className="container mx-auto px-4 space-y-3">
+        {/* First Row: Two columns */}
+        <div className="grid md:grid-cols-2 gap-3 items-center">
+          {/* Left Card */}
+          <div className="relative bg-[#191919] p-8 rounded-2xl text-white h-full w-auto">
+            <img
+              src={Curve}
+              alt="Logo"
+              className="absolute w-full right-0 bottom-0 z-0"
+            />
+            <div className="flex items-center text-center gap-2 mb-2">
+              <img
+                src={Allies}
+                alt="Nav Commercial"
+                className="w-12 h-12 object-cover"
+              />
+              <h2 className="text-3xl md:text-4xl mb-2">Growth Allies</h2>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Funding dreams, together.</h2>
-            <p className="text-gray-300 text-lg mb-8">
-              Since our founding, we've helped thousands of businesses access over $1 billion in funding. Our mission is to empower entrepreneurs with the capital they need to succeed.
+            <h2 className="text-lendnow-300 text-3xl md:text-4xl ">
+              Fueling dreams, together
+            </h2>
+            <p className="mt-8 text-md lg:text-lg text-center">
+              We Partner with:
             </p>
-            
-            <ul className="space-y-4">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-4 mb-4 mt-2">
               {[
-                "Deep industry expertise across multiple sectors",
-                "Dedicated account managers for every client",
-                "Transparent terms with no hidden fees or surprises",
-                "Ongoing support throughout the funding relationship"
+                "Accountants",
+                "Advisors",
+                "Bankers",
+                "Bookkeepers",
+                "Consultants",
+                "Tax-Strategists",
               ].map((item, index) => (
-                <li key={index} className="flex">
-                  <svg className="h-6 w-6 text-lendnow-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                <li key={index} className="flex items-center mt-4 text-center">
+                  <svg
+                    className="h-6 w-6 text-white rounded-full bg-[#FF9494] mr-3 mt-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 12l2 2 4-4"
+                    />
                   </svg>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
-            
-            <button className="mt-8 inline-flex items-center bg-lendnow-gradient hover:bg-lendnow-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-              About Our Team
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
+
+            <p className="text-gray-300 italic text-lg mb-6">
+              Clients have needs. We have solutions. At LendNav, we help you
+              deliver more for your clients.
+            </p>
+            <button className="flex mx-auto items-center bg-lendnow-gradient hover:bg-lendnow-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+              Partner With Us
             </button>
           </div>
-          
-          <div className="relative">
-            <div className="bg-black bg-opacity-30 backdrop-filter backdrop-blur-sm p-6 rounded-2xl border border-gray-700">
-              <img 
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=500&q=80" 
-                alt="Funding team" 
-                className="mb-8 rounded-xl shadow-lg"
-              />
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-lendnow-400">12+</div>
-                  <div className="text-sm text-gray-400">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-lendnow-400">$1B+</div>
-                  <div className="text-sm text-gray-400">Funded</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-lendnow-400">4.9</div>
-                  <div className="text-sm text-gray-400">Customer Rating</div>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <img 
-                  src="/lovable-uploads/4540b4b9-d8cc-4166-a8d2-6df663e22ba5.png" 
-                  alt="LendNow Logo" 
-                  className="h-8 opacity-70"
-                />
-              </div>
-            </div>
-            
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-lendnow-500 rounded-full opacity-20 -z-10"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-lendnow-500 rounded-full opacity-20 -z-10"></div>
+          {/* Right Image */}
+          <div>
+            <img
+              src={RightImage}
+              alt="LendNav Lightbox Sign"
+              className="rounded-xl shadow-lg h-full w-auto"
+            />
           </div>
+        </div>
+
+        {/* Second Row: Full width */}
+        <div className="relative w-full rounded-lg mx-auto bg-[#FF9494] p-8">
+          <img
+            src={Curve2}
+            alt="Logo"
+            className="absolute h-full right-0 bottom-0 z-0"
+          />
+          <div className="inline-flex bg-white px-2 py-1 rounded-sm text-sm text-lendnow-400 mb-6">
+            <span>Why LendNav is Different</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl mb-6">
+            We’re not just consultants-We’re listeners.
+          </h2>
+          <ul className="space-y-4 text-left max-w-xl mb-8">
+            {[
+              "Strategies designed to maximize your return on investment",
+              "Funding is just the start—we stay in your corner",
+              "A partner that talks like a person—not a policy",
+              "Go beyond the business and build an investment property portfolio",
+            ].map((item, index) => (
+              <li key={index} className="flex items-start">
+                <svg
+                  className="h-3 w-3 text-lendnow-300 bg-white rounded-full mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12l2 2 4-4"
+                  />
+                </svg>
+                <span className="text-sm">{item}</span>
+              </li>
+            ))}
+          </ul>
+          <button className="inline-flex items-center bg-white text-black px-4 py-1 rounded-sm text-sm transition-colors">
+            Contact Us
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>

@@ -1,16 +1,16 @@
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState } from "react";
 
 const faqs = [
   {
     question: "What are the requirements to qualify for funding?",
     answer:
-      "Generally, we look for businesses with at least 6 months of operating history and $10,000 in monthly revenue. Credit requirements vary by product, with some options available for businesses with less-than-perfect credit scores.",
+      "No, you do not need perfect credit. You can qualify even with credit in the 500s or lower if your business bank statements are strong.",
   },
   {
     question: "How quickly can I receive funding?",
@@ -40,34 +40,56 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleItem = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
   return (
     <section id="faq" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <div className="inline-block px-3 py-1 bg-lendnow-100 text-lendnow-600 rounded-full text-sm font-medium mb-4">
-            Have Questions?
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left Section */}
+          <div>
+            <h2 className="text-3xl md:text-3xl mb-6">
+              Frequently asked questions
+            </h2>
+            <button className="mt-4 px-4 py-2 bg-[#FF9494] text-sm text-white rounded-sm hover:bg-lendnow-400 transition">
+              Ask another question
+            </button>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Frequently asked questions
-          </h2>
-          <p className="text-lg text-gray-600">
-            Find answers to common questions about our funding solutions.
-          </p>
-        </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {/* Right Section - Accordion */}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => {
+              const isOpen = openIndex === index;
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-100 rounded-lg p-4 cursor-pointer transition"
+                  onClick={() => toggleItem(index)}
+                >
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-md">{faq.question}</h3>
+                    {isOpen ? (
+                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black text-white text-lg font-bold leading-none">
+                        <span className="pb-1">-</span>
+                      </div>
+                    ) : (
+                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF9494] text-white text-lg font-bold leading-none">
+                        <span className="pb-1">+</span>
+                      </div>
+                    )}
+                  </div>
+                  {isOpen && (
+                    <div className="mt-3 text-sm text-gray-600">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
