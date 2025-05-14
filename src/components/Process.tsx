@@ -67,7 +67,7 @@ const Process = () => {
                 <div className="flex items-center mb-4">
                   <div
                     className={
-                      "bg-lendnow-500 text-black font-bold size-8 rounded-full flex items-center justify-center mr-3 " +
+                      "text-black font-bold size-8 rounded-full flex items-center justify-center mr-3 " +
                       step.color
                     }
                   >
