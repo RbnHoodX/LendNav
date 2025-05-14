@@ -70,7 +70,7 @@ const Solutions = () => {
   return (
     <section
       id="solutions"
-      className="relative p-8 md:py-24 bg-[#FF9494] m-4 rounded-lg"
+      className="relative md:p-8 p-4 md:py-24 bg-[#FF9494] m-4 rounded-lg"
     >
       <img
         src={LogoBack}
@@ -83,17 +83,16 @@ const Solutions = () => {
         className="absolute w-[200px] bottom-[0px] right-0 z-0"
       />
       <div className="relative max-w-6xl mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl mb-4">
-            Business financing solutions
-          </h2>
-          <p className="md:text-md text-sm text-gray-800 text-center">
+        <div className="max-w-3xl mx-auto mb-12 md:mb-16">
+          <div className="text-center">
+            <h2 className="md:text-3xl text-2xl md:text-4xl mb-4">
+              Business financing solutions
+            </h2>
+          </div>
+          <p className="md:text-md text-sm md:text-center text-gray-800 md:px-16">
             Discover our suite of LendNav products - specialized alternative
-            lending solutions
-          </p>
-          <p className="md:text-md text-sm text-gray-800 text-center">
-            designed for businesses and individuals who don't fit traditional
-            financing models
+            lending solutions designed for businesses and individuals who don't
+            fit traditional financing models
           </p>
         </div>
 
@@ -122,7 +121,7 @@ const Solutions = () => {
                   {solution.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <svg
-                        className="w-5 h-5 text-white rounded-full bg-[#FF9494] mr-2 mt-0.5"
+                        className="min-w-5 h-5 text-white rounded-full bg-[#FF9494] mr-2 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
