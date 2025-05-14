@@ -120,7 +120,7 @@ const Testimonials = () => {
           ))}
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full md:h-80 h-[1000px] bg-gradient-to-t from-white to-transparent pointer-events-none" />
     </section>
   );
 };

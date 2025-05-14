@@ -36,10 +36,10 @@ const Process = () => {
   return (
     <section
       id="process"
-      className="relative py-16 md:py-2 bg-[#101010] m-4 rounded-lg"
+      className="relative py-2 md:py-2 bg-[#101010] m-4 rounded-lg"
     >
       <img src={LogoBack} alt="Logo" className="absolute w-[300px] z-0" />
-      <div className="relative container mx-auto px-4 py-24">
+      <div className="relative container mx-auto px-4 md:py-24 py-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Funding in four easy steps
@@ -67,13 +67,15 @@ const Process = () => {
                 <div className="flex items-center mb-4">
                   <div
                     className={
-                      "text-black font-bold size-8 rounded-full flex items-center justify-center mr-3 " +
+                      "text-black font-bold md:text-lg text-sm md:size-8 size-5 rounded-full flex items-center justify-center mr-3 " +
                       step.color
                     }
                   >
                     {step.id}
                   </div>
-                  <h3 className="text-lg font-semibold">{step.title}</h3>
+                  <h3 className="md:text-lg text-[12px] font-semibold">
+                    {step.title}
+                  </h3>
                 </div>
               </CardContent>
             </Card>

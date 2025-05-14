@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Logo from "../assets/Logo.png";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const isMobile = useIsMobile();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   // Handle scroll effect
   if (typeof window !== "undefined") {
@@ -38,7 +40,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src={Logo} alt="Logo" className="h-8 w-auto" />
+          <img src={Logo} alt="Logo" className="w-40 lg:w-48" />
         </div>
 
         {!isMobile ? (
@@ -48,7 +50,7 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-900 hover:text-lendnow-600 text-[1vw]"
+                  className="text-gray-900 hover:text-lendnow-600 sm:text-[10px] md:text-[12px] lg:text-md"
                 >
                   {item.label}
                 </a>
@@ -57,43 +59,13 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="flex items-center">
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-9 w-9">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <line x1="4" x2="20" y1="12" y2="12" />
-                    <line x1="4" x2="20" y1="6" y2="6" />
-                    <line x1="4" x2="20" y1="18" y2="18" />
-                  </svg>
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <div className="flex flex-col justify-center gap-4 mt-8">
-                  {navItems.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="text-lg font-medium"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                  <Button className="w-full mt-4 bg-lendnow-gradient">
-                    Apply Now
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
+            <button
+              className="md:hidden"
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Open Menu"
+            >
+              <Menu className="w-7 h-7" />
+            </button>
           </div>
         )}
         {!isMobile && (
@@ -102,6 +74,24 @@ const Navbar = () => {
           </Button>
         )}
       </div>
+      {isMobile && open && (
+        <div className="absolute md:hidden px-4 pb-4 bg-white w-full h-[100vh]">
+          <div className="flex flex-col gap-4 mt-16 justify-center items-center">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="text-lg font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
+            <Button className="w-full mt-4 bg-lendnow-gradient">
+              Apply Now
+            </Button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

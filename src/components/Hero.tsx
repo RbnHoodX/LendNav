@@ -14,8 +14,8 @@ const Hero = () => {
       className="pt-24 pb-12 md:pt-24 px-4 md:pb-20 overflow-hidden"
     >
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative space-y-6 w-fillRule max-w-lg animate-fade-in">
+        <div className="grid md:grid-cols-2 gap-2 items-center">
+          <div className="relative space-y-4 w-fillRule max-w-lg animate-fade-in">
             {/* Background Elements */}
             <img
               src={LogoBack}
@@ -69,20 +69,20 @@ const Hero = () => {
                 />
               </div>
 
-              <div className="flex w-full">
+              <div className="flex w-full ">
                 {/* Second row: hero_card2 spans 1/3 and hero_card3 spans 2/3 */}
                 <div className="mr-5">
                   <img
                     src={HeroCard2}
                     alt="Hero Card 2"
-                    className="w-auto h-52 rounded-md mb-2"
+                    className="w-full object-cover h-full rounded-md mb-2"
                   />
                 </div>
-                <div className="rounded-lg">
+                <div className="rounded-lg ">
                   <img
                     src={HeroCard3}
                     alt="Hero Card 3"
-                    className="w-full h-52 rounded-md mb-2"
+                    className="w-full object-contain rounded-md mb-2"
                   />
                 </div>
               </div>

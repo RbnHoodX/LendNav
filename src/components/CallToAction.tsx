@@ -3,18 +3,18 @@ import LogoBack from "../assets/Logo_funded.png";
 
 const CallToAction = () => {
   return (
-    <section className="relative py-10 bg-[#FF9494] text-[#472121] mx-16 rounded-lg translate-y-[50px]">
+    <section className="relative py-10 bg-[#FF9494] text-[#472121] md:mx-16 mx-8 rounded-lg translate-y-[50px]">
       <img
         src={LogoBack}
         alt="Logo"
         className="absolute rounded-lg h-full bottom-0 right-0 -z-10"
       />
-      <div className="relative container mx-auto px-16 py-16">
+      <div className="relative container mx-auto md:px-16 md:py-16 px-4 py-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left Section: Text */}
-          <div className="text-center md:text-left">
-            <h2 className="text-4xl md:text-5xl mb-2">Let's get you funded</h2>
-            <p className="text-md opacity-90">
+          <div className="text-center md:text-left md:mb-none mb-8">
+            <h2 className="text-2xl md:text-5xl mb-2">Let's get you funded</h2>
+            <p className="text-sm md:text-md opacity-90">
               Flexible, fast financing—tailored to you.
             </p>
           </div>

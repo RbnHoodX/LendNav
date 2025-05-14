@@ -8,9 +8,9 @@ const GrowthAllies = () => {
     <section id="about" className="py-10">
       <div className="container mx-auto px-4 space-y-3">
         {/* First Row: Two columns */}
-        <div className="grid md:grid-cols-2 gap-3 items-center">
+        <div className="flex lg:flex-row flex-wrap gap-2 items-center justify-center">
           {/* Left Card */}
-          <div className="relative bg-[#191919] p-8 rounded-2xl text-white h-full w-auto">
+          <div className="relative bg-[#191919] p-8 pt-16 rounded-2xl text-white max-w-[600px] h-[600px] ">
             <img
               src={Curve}
               alt="Logo"
@@ -21,11 +21,13 @@ const GrowthAllies = () => {
                 <img
                   src={Allies}
                   alt="Nav Commercial"
-                  className="w-12 h-12 object-cover"
+                  className="md:w-12 md:h-12 w-8 h-8 object-cover"
                 />
-                <h2 className="text-4xl lg:text-6xl mb-2">Growth Allies</h2>
+                <h2 className="text-xl lg:text-5xl md:text-3xl sm:text-2xl mb-2">
+                  Growth Allies
+                </h2>
               </div>
-              <h2 className="text-lendnow-300 text-3xl lg:text-4xl ">
+              <h2 className="text-lendnow-300 text-lg md:text-2xl sm:text-xl lg:text-3xl ">
                 Fueling dreams, together
               </h2>
               <p className="mt-8 text-md lg:text-lg text-center">
@@ -42,7 +44,7 @@ const GrowthAllies = () => {
                 ].map((item, index) => (
                   <li key={index} className="flex items-center mt-4">
                     <svg
-                      className="h-6 w-6 text-black rounded-full bg-[#FF9494] mr-3"
+                      className="md:h-6 md:w-6 min-w-4 h-4 text-black rounded-full bg-[#FF9494] mr-3"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -54,7 +56,7 @@ const GrowthAllies = () => {
                         d="M9 12l2 2 4-4"
                       />
                     </svg>
-                    <span>{item}</span>
+                    <span className="md:text-sm text-[10px]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -69,11 +71,11 @@ const GrowthAllies = () => {
             </div>
           </div>
           {/* Right Image */}
-          <div>
+          <div className="lg:h-full lg:w-auto max-w-[600px]">
             <img
               src={RightImage}
               alt="LendNav Lightbox Sign"
-              className="rounded-xl shadow-lg h-full w-auto"
+              className="rounded-xl shadow-lg md:max-w-[600px]"
             />
           </div>
         </div>
@@ -101,7 +103,7 @@ const GrowthAllies = () => {
               ].map((item, index) => (
                 <li key={index} className="flex items-center">
                   <svg
-                    className="h-4 w-4 text-lendnow-300 bg-white rounded-full mr-3"
+                    className="h-4 min-w-4 text-lendnow-300 bg-white rounded-full mr-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -113,7 +115,7 @@ const GrowthAllies = () => {
                       d="M9 12l2 2 4-4"
                     />
                   </svg>
-                  <span className="text-md font-bold text-gray-800">
+                  <span className="md:text-md text-sm font-bold text-gray-800">
                     {item}
                   </span>
                 </li>

@@ -3,7 +3,7 @@ import NavCom from "../assets/nav_com.png";
 
 const Commercial = () => {
   return (
-    <section className="py-4 md:py-4 bg-[#2f2f2f] text-white relative overflow-hidden m-16 rounded-lg">
+    <section className="py-4 md:py-4 bg-[#2f2f2f] text-white relative overflow-hidden md:m-16 m-8 rounded-lg">
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-20"></div>
 

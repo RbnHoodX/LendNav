@@ -73,11 +73,11 @@ const FAQ = () => {
                   <div className="flex justify-between items-center">
                     <h3 className="text-md">{faq.question}</h3>
                     {isOpen ? (
-                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black text-white text-lg font-bold leading-none">
+                      <div className="min-w-6 h-6 flex items-center justify-center rounded-full bg-black text-white text-lg font-bold leading-none">
                         <span className="pb-1">-</span>
                       </div>
                     ) : (
-                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FF9494] text-white text-lg font-bold leading-none">
+                      <div className="min-w-6 h-6 flex items-center justify-center rounded-full bg-[#FF9494] text-white text-lg font-bold leading-none">
                         <span className="pb-1">+</span>
                       </div>
                     )}
