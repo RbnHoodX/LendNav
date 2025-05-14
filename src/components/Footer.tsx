@@ -5,7 +5,7 @@ import LocationIcon from "../assets/location.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#191919] text-white pt-16 pb-6 px-12">
+    <footer className="bg-[#191919] text-white pt-24 pb-6 px-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* First Column: Logo, Text, Contact Info */}
@@ -47,16 +47,14 @@ const Footer = () => {
 
           {/* Second Column: Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-lendnow-300 mb-6">
-              Quick Links
-            </h3>
+            <h3 className="text-lg text-lendnow-300 mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {["Products", "Process", "About", "Contact", "FAQ"].map(
                 (item) => (
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors text-md"
                     >
                       {item}
                     </a>
@@ -68,9 +66,7 @@ const Footer = () => {
 
           {/* Third Column: Products */}
           <div>
-            <h3 className="text-lg font-semibold text-lendnow-300 mb-6">
-              Products
-            </h3>
+            <h3 className="text-lg text-lendnow-300 mb-6">Products</h3>
             <ul className="space-y-3">
               {[
                 "Nav Surge",
@@ -83,7 +79,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-md"
                   >
                     {item}
                   </a>
@@ -94,16 +90,14 @@ const Footer = () => {
 
           {/* Fourth Column: Legal */}
           <div>
-            <h3 className="text-lg font-semibold text-lendnow-300 mb-6">
-              Legal
-            </h3>
+            <h3 className="text-lg text-lendnow-300 mb-6">Legal</h3>
             <ul className="space-y-3">
               {["Privacy Policy", "Terms & Conditions", "Cookies Settings"].map(
                 (item) => (
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors text-md"
                     >
                       {item}
                     </a>
@@ -115,16 +109,14 @@ const Footer = () => {
 
           {/* Fifth Column: Follow Us */}
           <div>
-            <h3 className="text-lg font-semibold text-lendnow-300 mb-6">
-              Follow Us
-            </h3>
+            <h3 className="text-lg text-lendnow-300 mb-6">Follow Us</h3>
             <ul className="space-y-3">
               {["Facebook", "Instagram", "Twitter/X", "YouTube"].map(
                 (platform) => (
                   <li key={platform}>
                     <a
                       href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
+                      className="text-gray-400 hover:text-white transition-colors text-md"
                     >
                       {platform}
                     </a>
@@ -137,7 +129,7 @@ const Footer = () => {
 
         <div className="pt-6">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
-            <p className="text-gray-100 text-md mb-4 pb-16 md:mb-0 mx-auto">
+            <p className="text-gray-100 text-sm mb-4 pb-16 md:mb-0 mx-auto">
               Copyright &copy; {new Date().getFullYear()} Lend Nav. All rights
               reserved.
             </p>

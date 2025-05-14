@@ -80,7 +80,7 @@ const Industries = () => {
                 <h3 className="text-xl font-semibold mb-2 text-gray-800">
                   {industry.title}
                 </h3>
-                <p className="text-gray-600">{industry.description}</p>
+                <p className="text-gray-600 text-sm">{industry.description}</p>
               </div>
             </div>
           ))}

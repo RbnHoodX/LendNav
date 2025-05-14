@@ -48,7 +48,7 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-gray-700 hover:text-lendnow-600 text-sm font-medium"
+                  className="text-gray-900 hover:text-lendnow-600 text-[1vw]"
                 >
                   {item.label}
                 </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
           </div>
         )}
         {!isMobile && (
-          <Button className="bg-[#FF9494] hover:bg-lendnow-400 mr-4">
+          <Button className="bg-[#FF9494] hover:bg-lendnow-400 px-3 py-1 text-[1vw]">
             Get Started
           </Button>
         )}

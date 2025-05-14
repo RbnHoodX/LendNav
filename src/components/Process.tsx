@@ -44,7 +44,7 @@ const Process = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Funding in four easy steps
           </h2>
-          <p className="text-lg text-gray-200">
+          <p className="text-sm text-gray-200">
             Fast, simple process. Designed to keep your focus on your business,
             not on paperwork
           </p>
@@ -67,7 +67,7 @@ const Process = () => {
                 <div className="flex items-center mb-4">
                   <div
                     className={
-                      "bg-lendnow-500 text-black font-bold size-8 rounded-full flex items-center justify-center mr-3 " +
+                      "text-black font-bold size-8 rounded-full flex items-center justify-center mr-3 " +
                       step.color
                     }
                   >

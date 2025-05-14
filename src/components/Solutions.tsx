@@ -87,21 +87,25 @@ const Solutions = () => {
           <h2 className="text-3xl md:text-4xl mb-4">
             Business financing solutions
           </h2>
-          <p className="text-md text-gray-800 w-[65vw] mx-auto">
+          <p className="text-md text-gray-800 text-center">
             Discover our suite of LendNav products - specialized alternative
-            lending solutions designed for businesses and individuals who don't
-            fit traditional financing models
+            lending solutions
+          </p>
+          <p className="text-md text-gray-800 text-center">
+            designed for businesses and individuals who don't fit traditional
+            financing models
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {solutionsData.slice(0, 3).map((solution) => (
+        <div className="max-w-[1200px] flex flex-wrap gap-x-6 gap-y-6 justify-center">
+          {solutionsData.map((solution, index) => (
             <Card
               key={solution.id}
-              className="shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+              className={`shadow-sm w-[350px] hover:shadow-md transition-shadow flex flex-col justify-between
+              `}
             >
-              <div className="p-4">
-                <div className="flex items-center gap-2">
+              <div className="p-8">
+                <div className="flex items-center gap-2 mb-6">
                   <img
                     src={solution.image}
                     alt={solution.title}
@@ -109,7 +113,7 @@ const Solutions = () => {
                   />
                   <h3 className="text-xl font-bold">{solution.title}</h3>
                 </div>
-                <p className="mt-2 text-sm text-gray-700">
+                <p className="mt-2 text-sm font-bold text-gray-700">
                   {solution.description}
                 </p>
               </div>
@@ -154,69 +158,6 @@ const Solutions = () => {
               </CardFooter>
             </Card>
           ))}
-        </div>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3">
-            {solutionsData.slice(3).map((solution) => (
-              <Card
-                key={solution.id}
-                className="shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-              >
-                <div className="p-6">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src={solution.image}
-                      alt={solution.title}
-                      className="w-8 h-8 object-cover rounded-sm"
-                    />
-                    <h3 className="text-xl font-bold">{solution.title}</h3>
-                  </div>
-                  <p className="mt-2 text-sm text-gray-700">
-                    {solution.description}
-                  </p>
-                </div>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {solution.features.map((feature, index) => (
-                      <li key={index} className="flex text-sm items-start">
-                        <svg
-                          className="w-5 h-5 text-white rounded-full bg-[#FF9494] mr-2 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button className="w-2/3 mx-auto bg-[#191919] hover:bg-[#292929]">
-                    Apply Now
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 ml-2"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
         </div>
       </div>
     </section>

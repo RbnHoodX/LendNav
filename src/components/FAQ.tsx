@@ -8,32 +8,33 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What are the requirements to qualify for funding?",
+    question: "Do I need perfect credit to apply?",
     answer:
       "No, you do not need perfect credit. You can qualify even with credit in the 500s or lower if your business bank statements are strong.",
   },
   {
-    question: "How quickly can I receive funding?",
+    question: "How fast can i get approved and funded?",
     answer:
       "Our funding timelines vary by product, with some options available as quickly as the same business day after approval. Most funding is completed within 1-3 business days once all documentation is received.",
   },
   {
-    question: "What documents do I need to apply?",
+    question: "Can I get help figuring out the best option?",
     answer:
       "Typically, we require 3-6 months of business bank statements, basic business information, and personal identification. Depending on the funding amount and type, we may request additional documentation.",
   },
   {
-    question: "Do you check personal credit scores?",
+    question: "Is there a minimum loan amount?",
     answer:
       "Yes, we do consider personal credit as part of our evaluation process, but we offer solutions for various credit profiles. Some products have minimum credit score requirements while others are more flexible.",
   },
   {
-    question: "Can I apply if I've been declined by a bank?",
+    question: "What makes LendNav different from traditional lenders?",
     answer:
       "Absolutely! We specialize in finding funding solutions for businesses that may not fit traditional bank criteria. Our alternative funding options often work for businesses that have been declined elsewhere.",
   },
   {
-    question: "Are there any prepayment penalties?",
+    question:
+      "Does it cost me more to work with you, rather than going to a bank directly?",
     answer:
       "This depends on the specific funding product. Some of our solutions offer discounts for early repayment, while others have a fixed cost structure. Your funding specialist will clearly explain the terms before you sign any agreement.",
   },
@@ -82,7 +83,7 @@ const FAQ = () => {
                     )}
                   </div>
                   {isOpen && (
-                    <div className="mt-3 text-sm text-gray-600">
+                    <div className="mt-3 text-md text-gray-600">
                       {faq.answer}
                     </div>
                   )}

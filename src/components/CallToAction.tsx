@@ -3,18 +3,18 @@ import LogoBack from "../assets/Logo_funded.png";
 
 const CallToAction = () => {
   return (
-    <section className="relative py-10 bg-[#FF9494] text-[#472121] mx-16 rounded-sm translate-y-[30px]">
+    <section className="relative py-10 bg-[#FF9494] text-[#472121] mx-16 rounded-lg translate-y-[50px]">
       <img
         src={LogoBack}
         alt="Logo"
-        className="absolute h-full bottom-0 right-0 -z-10"
+        className="absolute rounded-lg h-full bottom-0 right-0 -z-10"
       />
-      <div className="container mx-auto px-8">
+      <div className="relative container mx-auto px-16 py-16">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left Section: Text */}
           <div className="text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl mb-2">Let's get you funded</h2>
-            <p className="text-sm opacity-90">
+            <h2 className="text-4xl md:text-5xl mb-2">Let's get you funded</h2>
+            <p className="text-md opacity-90">
               Flexible, fast financing—tailored to you.
             </p>
           </div>
@@ -26,6 +26,18 @@ const CallToAction = () => {
               className="bg-[#222222] text-gray-100 hover:bg-[#333333]"
             >
               Apply Now
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 ml-2"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </Button>
             <Button
               size="lg"

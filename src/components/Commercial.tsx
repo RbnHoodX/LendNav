@@ -10,13 +10,13 @@ const Commercial = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center">
           {/* Image Section */}
-          <div className="md:w-1/2 mb-8 md:mb-0">
+          <div className="relative md:w-1/2 mb-8 md:mb-0">
             <img
               src={BuildingImage}
               alt="Commercial Building"
               className="w-[32] h-[32]"
             />
-            <div className="absolute bottom-0 left-0 w-1/2 h-32 bg-gradient-to-t from-[#2f2f2f] to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#2f2f2f] to-transparent pointer-events-none" />
           </div>
 
           {/* Text Section */}
@@ -27,25 +27,32 @@ const Commercial = () => {
                 alt="Nav Commercial"
                 className="w-8 h-8 lg:w-12 lg:h-12 object-cover"
               />
-              <h2 className="text-2xl md:text-5xl font-bold">
+              <h2 className="text-xl md:text-2xl lg:text-4xl font-bold">
                 Nav <span className="text-lendnow-300">Commercial</span>
               </h2>
             </div>
-            <h2 className="text-2xl md:text-5xl mt-2">
+            <h2 className="text-md md:text-xl lg:text-3xl mt-2">
               Own your future, literally
             </h2>
 
             <div className="space-y-4 mt-2">
               <p className="text-gray-300 text-sm">
                 From storefronts to investment properties, our commercial loan
-                options make ownership accessible and strategic.
+                options make ownership accessible and strategic
               </p>
 
               <ul className="space-y-3">
                 {[
-                  "Simplified application process with minimal documentation",
-                  "Dedicated funding specialist assigned to your account",
-                  "Competitive rates with flexible terms and no hidden fees",
+                  <div>
+                    Owner-occupied purchases <b>w/ no tax returns</b>
+                  </div>,
+                  <div>
+                    <b>No income check</b> for investment property transactions
+                  </div>,
+                  <div>
+                    <b>Refinance</b> solutions: cash-out, lower rate, exit a
+                    balloon
+                  </div>,
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <svg
