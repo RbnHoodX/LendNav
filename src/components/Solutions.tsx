@@ -87,11 +87,11 @@ const Solutions = () => {
           <h2 className="text-3xl md:text-4xl mb-4">
             Business financing solutions
           </h2>
-          <p className="text-md text-gray-800 text-center">
+          <p className="md:text-md text-sm text-gray-800 text-center">
             Discover our suite of LendNav products - specialized alternative
             lending solutions
           </p>
-          <p className="text-md text-gray-800 text-center">
+          <p className="md:text-md text-sm text-gray-800 text-center">
             designed for businesses and individuals who don't fit traditional
             financing models
           </p>
