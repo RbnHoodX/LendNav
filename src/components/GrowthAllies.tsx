@@ -56,12 +56,12 @@ const GrowthAllies = () => {
                         d="M9 12l2 2 4-4"
                       />
                     </svg>
-                    <span className="md:text-sm text-[10px]">{item}</span>
+                    <span className="md:text-sm text-[12px]">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-gray-300 italic text-md mb-6">
+              <p className="text-gray-300 italic md:text-md text-[12px] mb-6">
                 Clients have needs. We have solutions. At LendNav, we help you
                 deliver more for your clients.
               </p>
