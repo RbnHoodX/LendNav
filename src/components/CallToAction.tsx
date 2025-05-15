@@ -13,8 +13,10 @@ const CallToAction = () => {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Left Section: Text */}
           <div className="text-center md:text-left md:mb-none mb-8">
-            <h2 className="text-2xl md:text-5xl mb-2">Let's get you funded</h2>
-            <p className="text-sm md:text-md opacity-90">
+            <h2 className="text-2xl md:text-5xl font-medium mb-2">
+              Let's get you funded
+            </h2>
+            <p className="text-md opacity-90">
               Flexible, fast financing—tailored to you.
             </p>
           </div>

@@ -34,17 +34,14 @@ const processSteps = [
 
 const Process = () => {
   return (
-    <section
-      id="process"
-      className="relative py-2 md:py-2 bg-[#101010] m-4 rounded-lg"
-    >
+    <section id="process" className="relative py-2 md:py-2 bg-[#101010]">
       <img src={LogoBack} alt="Logo" className="absolute w-[300px] z-0" />
       <div className="relative container mx-auto px-4 md:py-24 py-8">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-medium mb-4 text-white">
             Funding in four easy steps
           </h2>
-          <p className="text-sm text-gray-200">
+          <p className="text-md text-gray-200">
             Fast, simple process. Designed to keep your focus on your business,
             not on paperwork
           </p>
@@ -73,7 +70,7 @@ const Process = () => {
                   >
                     {step.id}
                   </div>
-                  <h3 className="md:text-lg text-[12px] font-semibold">
+                  <h3 className="md:text-lg text-[12px] font-medium">
                     {step.title}
                   </h3>
                 </div>

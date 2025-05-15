@@ -18,6 +18,7 @@ const solutionsData = [
       "Minimal paperwork required",
       "Boost cash flow instantly",
     ],
+    idealFor: "Ideal for: urgent expenses or cash flow gaps",
     image: NavSurgeImage,
   },
   {
@@ -29,6 +30,7 @@ const solutionsData = [
       "No prepayment penalties — ever",
       "Simple monthly payments",
     ],
+    idealFor: "Ideal for: inventory purchases, and surprise expenses",
     image: NavFlexImage,
   },
   {
@@ -40,6 +42,7 @@ const solutionsData = [
       "10-year fixed terms",
       "Predictable monthly payments",
     ],
+    idealFor: "Ideal for: expansion, large projects, and consolidation",
     image: NavTermImage,
   },
   {
@@ -51,6 +54,7 @@ const solutionsData = [
       "Flexible multi-year terms",
       "Affordable monthly payments",
     ],
+    idealFor: "Ideal for: construction and machinery upgrades",
     image: NavEquipImage,
   },
   {
@@ -62,6 +66,7 @@ const solutionsData = [
       "POS system & terminal upgrades",
       "Chargeback protection and fraud control",
     ],
+    idealFor: "Ideal for: retail, restaurants, and service providers",
     image: NavSwipeImage,
   },
 ];
@@ -70,7 +75,7 @@ const Solutions = () => {
   return (
     <section
       id="solutions"
-      className="relative md:p-8 p-4 md:py-24 bg-[#FF9494] m-4 rounded-lg"
+      className="relative md:p-8 p-4 md:py-24 bg-[#FF9494] m-8 rounded-lg"
     >
       <img
         src={LogoBack}
@@ -82,46 +87,46 @@ const Solutions = () => {
         alt="Logo"
         className="absolute w-[200px] bottom-[0px] right-0 z-0"
       />
-      <div className="relative max-w-6xl mx-auto px-4">
+      <div className="relative text-[#191919] px-16">
         <div className="max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="text-center">
-            <h2 className="md:text-3xl text-2xl md:text-4xl mb-4">
+            <h2 className="md:text-3xl text-2xl md:text-4xl font-medium mb-4">
               Business financing solutions
             </h2>
           </div>
-          <p className="md:text-md text-sm md:text-center text-gray-800 md:px-16">
+          <p className="text-md md:text-center text-gray-800 md:px-16">
             Discover our suite of LendNav products - specialized alternative
             lending solutions designed for businesses and individuals who don't
             fit traditional financing models
           </p>
         </div>
 
-        <div className="max-w-[1200px] flex flex-wrap gap-x-6 gap-y-6 justify-center">
+        <div className="w-full flex flex-wrap gap-x-4 gap-y-4 justify-center">
           {solutionsData.map((solution, index) => (
             <Card
               key={solution.id}
-              className={`shadow-sm w-[350px] hover:shadow-md transition-shadow flex flex-col justify-between
+              className={`shadow-sm w-[400px] h-[400px] hover:shadow-md transition-shadow flex flex-col justify-between
               `}
             >
-              <div className="p-8">
+              <div className="px-6 pt-8 mb-4">
                 <div className="flex items-center gap-2 mb-6">
                   <img
                     src={solution.image}
                     alt={solution.title}
-                    className="w-8 h-8 object-cover rounded-sm"
+                    className="w-12 h-12 object-cover rounded-sm"
                   />
-                  <h3 className="text-xl font-bold">{solution.title}</h3>
+                  <h3 className="text-2xl font-bold">{solution.title}</h3>
                 </div>
-                <p className="mt-2 text-sm font-bold text-gray-700">
+                <p className="text-[14px] text-gray-800 font-medium">
                   {solution.description}
                 </p>
               </div>
-              <CardContent className="pt-1">
-                <ul className="space-y-3">
+              <CardContent>
+                <ul className="space-y-3 mb-4">
                   {solution.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <svg
-                        className="min-w-5 h-5 text-white rounded-full bg-[#FF9494] mr-2 mt-0.5"
+                        className="min-w-4 h-4 text-white rounded-full bg-[#FF9494] mr-2 mt-0.5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -137,6 +142,10 @@ const Solutions = () => {
                     </li>
                   ))}
                 </ul>
+
+                <p className="border-l-[3px] italic text-xs leading-6 font-semibold pl-2 border-[#FF9494] text-gray-600">
+                  {solution.idealFor}
+                </p>
               </CardContent>
               <CardFooter className="pt-0">
                 <Button className="w-2/3 mx-auto bg-[#191919] hover:bg-[#292929]">

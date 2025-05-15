@@ -1,9 +1,3 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { useState } from "react";
 
 const faqs = [
@@ -13,7 +7,7 @@ const faqs = [
       "No, you do not need perfect credit. You can qualify even with credit in the 500s or lower if your business bank statements are strong.",
   },
   {
-    question: "How fast can i get approved and funded?",
+    question: "How fast can I get approved and funded?",
     answer:
       "Our funding timelines vary by product, with some options available as quickly as the same business day after approval. Most funding is completed within 1-3 business days once all documentation is received.",
   },
@@ -46,44 +40,49 @@ const FAQ = () => {
   const toggleItem = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
   };
+
   return (
     <section id="faq" className="py-16 md:py-24 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex md:flex-row flex-col gap-8 items-start justify-center">
           {/* Left Section */}
-          <div>
-            <h2 className="text-3xl md:text-3xl mb-6">
+          <div className="flex flex-col justify-center max-w-md">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
               Frequently asked questions
             </h2>
-            <button className="mt-4 px-4 py-2 bg-[#FF9494] text-sm text-white rounded-sm hover:bg-lendnow-400 transition">
+            <p className="text-gray-600 text-base mb-6">
+              Everything you need to know about how we work and how we can help
+              your business.
+            </p>
+            <button className="w-fit px-4 py-2 bg-[#FF9494] text-white text-sm rounded-md hover:bg-lendnow-400 transition">
               Ask another question
             </button>
           </div>
 
           {/* Right Section - Accordion */}
-          <div className="space-y-4">
+          <div className="flex flex-col space-y-4 max-w-2xl w-full">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
                 <div
                   key={index}
-                  className="bg-gray-100 rounded-lg p-4 cursor-pointer transition"
+                  className="bg-[#F6F3F3] rounded-lg p-5 cursor-pointer shadow-sm transition"
                   onClick={() => toggleItem(index)}
                 >
                   <div className="flex justify-between items-center">
-                    <h3 className="text-md">{faq.question}</h3>
-                    {isOpen ? (
-                      <div className="min-w-6 h-6 flex items-center justify-center rounded-full bg-black text-white text-lg font-bold leading-none">
-                        <span className="pb-1">-</span>
-                      </div>
-                    ) : (
-                      <div className="min-w-6 h-6 flex items-center justify-center rounded-full bg-[#FF9494] text-white text-lg font-bold leading-none">
-                        <span className="pb-1">+</span>
-                      </div>
-                    )}
+                    <h3 className="text-base font-medium text-gray-900">
+                      {faq.question}
+                    </h3>
+                    <div
+                      className={`min-w-6 h-6 flex items-center justify-center rounded-full text-white text-lg font-bold leading-none ${
+                        isOpen ? "bg-black" : "bg-[#FF9494]"
+                      }`}
+                    >
+                      <span className="pb-1">{isOpen ? "-" : "+"}</span>
+                    </div>
                   </div>
                   {isOpen && (
-                    <div className="mt-3 text-md text-gray-600">
+                    <div className="mt-3 text-sm text-gray-600">
                       {faq.answer}
                     </div>
                   )}

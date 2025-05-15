@@ -5,12 +5,12 @@ import Curve2 from "../assets/curve2.png";
 
 const GrowthAllies = () => {
   return (
-    <section id="about" className="py-10">
-      <div className="container mx-auto px-4 space-y-3">
+    <section id="about" className="py-8">
+      <div className="container space-y-3">
         {/* First Row: Two columns */}
         <div className="flex lg:flex-row flex-wrap gap-2 items-center justify-center">
           {/* Left Card */}
-          <div className="relative bg-[#191919] p-8 pt-16 rounded-2xl text-white max-w-[600px] h-[600px] ">
+          <div className="relative bg-[#191919] p-8 rounded-2xl text-white max-w-[500px] min-w-[500px] h-[500px] ">
             <img
               src={Curve}
               alt="Logo"
@@ -21,19 +21,15 @@ const GrowthAllies = () => {
                 <img
                   src={Allies}
                   alt="Nav Commercial"
-                  className="md:w-12 md:h-12 w-8 h-8 object-cover"
+                  className="w-14 h-14 object-cover"
                 />
-                <h2 className="text-xl lg:text-5xl md:text-3xl sm:text-2xl mb-2">
-                  Growth Allies
-                </h2>
+                <h2 className="text-5xl font-medium mb-2">Growth Allies</h2>
               </div>
-              <h2 className="text-lendnow-300 text-lg md:text-2xl sm:text-xl lg:text-3xl ">
+              <h2 className="text-lendnow-300 text-4xl font-medium lg:text-3xl ">
                 Fueling dreams, together
               </h2>
-              <p className="mt-8 text-md lg:text-lg text-center">
-                We Partner with:
-              </p>
-              <ul className="grid grid-cols-2 gap-x-8 w-[80%] mx-auto gap-y-4 mb-8 mt-2">
+              <p className="mt-4 text-lg text-center">We Partner with:</p>
+              <ul className="grid grid-cols-2 gap-x-4 w-[80%] mx-auto  mb-8">
                 {[
                   "Accountants",
                   "Advisors",
@@ -56,26 +52,28 @@ const GrowthAllies = () => {
                         d="M9 12l2 2 4-4"
                       />
                     </svg>
-                    <span className="md:text-sm text-[12px]">{item}</span>
+                    <span className="md:text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-gray-300 italic md:text-md text-[12px] mb-6">
-                Clients have needs. We have solutions. At LendNav, we help you
-                deliver more for your clients.
+              <p className="text-gray-200 italic text-md font-extralight mb-6 text-center">
+                Clients have needs. We have solutions.
+                <br /> At LendNav, we help you deliver more for your clients.
               </p>
-              <button className="flex mx-auto items-center bg-lendnow-gradient hover:bg-lendnow-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                Partner With Us
-              </button>
+              <div className="flex items-center justify-center mb-4">
+                <button className="bg-lendnow-gradient hover:bg-lendnow-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                  Partner With Us
+                </button>
+              </div>
             </div>
           </div>
           {/* Right Image */}
-          <div className="lg:h-full lg:w-auto max-w-[600px]">
+          <div className="lg:h-full lg:w-auto max-w-[500px]">
             <img
               src={RightImage}
               alt="LendNav Lightbox Sign"
-              className="rounded-xl shadow-lg md:max-w-[600px]"
+              className="rounded-xl shadow-lg md:max-w-[500px]"
             />
           </div>
         </div>
@@ -91,7 +89,7 @@ const GrowthAllies = () => {
             <div className="inline-flex bg-white px-2 py-1 rounded-sm text-sm text-lendnow-400 mb-6">
               <span>Why LendNav is Different</span>
             </div>
-            <h2 className="text-3xl md:text-4xl mb-6">
+            <h2 className="text-3xl md:text-4xl font-medium mb-6">
               We’re not just consultants-We’re listeners.
             </h2>
             <ul className="space-y-4 text-left max-w-xl mb-8">
@@ -115,7 +113,7 @@ const GrowthAllies = () => {
                       d="M9 12l2 2 4-4"
                     />
                   </svg>
-                  <span className="md:text-md text-sm font-bold text-gray-800">
+                  <span className="md:text-md text-md font-medium text-black">
                     {item}
                   </span>
                 </li>

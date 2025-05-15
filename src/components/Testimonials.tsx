@@ -86,7 +86,7 @@ const Testimonials = () => {
     <section className="relative py-8 bg-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-3xl mb-4">
+          <h2 className="text-3xl md:text-4xl font-medium  mb-4">
             Customer Satisfaction - Our #1 Goal
           </h2>
         </div>
