@@ -101,14 +101,14 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="w-full flex flex-wrap lg:px-16 gap-4 justify-center">
+        <div className="w-full flex flex-wrap lg:px-16 gap-2 justify-center">
           {solutionsData.map((solution, index) => (
             <Card
               key={solution.id}
               className="shadow-sm w-full md:w-[400px] h-auto md:h-[400px] hover:shadow-md transition-shadow flex flex-col justify-between"
             >
-              <div className="px-6 pt-8 mb-4">
-                <div className="flex items-center gap-2 mb-6">
+              <div className="px-6 pt-8 mb-4 ">
+                <div className="flex items-center justify gap-2">
                   <img
                     src={solution.image}
                     alt={solution.title}
