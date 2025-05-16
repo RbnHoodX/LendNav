@@ -5,12 +5,12 @@ import Curve2 from "../assets/curve2.png";
 
 const GrowthAllies = () => {
   return (
-    <section id="about" className="py-8">
+    <section id="about" className="md:py-8 mb-8">
       <div className="container space-y-3">
         {/* First Row: Two columns */}
         <div className="flex lg:flex-row flex-wrap gap-2 items-center justify-center">
           {/* Left Card */}
-          <div className="relative bg-[#191919] p-8 rounded-2xl text-white max-w-[500px] min-w-[500px] h-[500px] ">
+          <div className="relative bg-[#191919] p-8 rounded-2xl text-white max-w-[500px] max-h-[500px] ">
             <img
               src={Curve}
               alt="Logo"
@@ -21,21 +21,25 @@ const GrowthAllies = () => {
                 <img
                   src={Allies}
                   alt="Nav Commercial"
-                  className="w-14 h-14 object-cover"
+                  className="md:w-14 md:h-14 w-10 h-10 object-cover"
                 />
-                <h2 className="text-5xl font-medium mb-2">Growth Allies</h2>
+                <h2 className="md:text-5xl sm:text-3xl text-xl font-medium mb-2">
+                  Growth Allies
+                </h2>
               </div>
-              <h2 className="text-lendnow-300 text-4xl font-medium lg:text-3xl ">
+              <h2 className="text-lendnow-300 md:text-4xl sm:text-xl text-lh font-medium lg:text-3xl ">
                 Fueling dreams, together
               </h2>
-              <p className="mt-4 text-lg text-center">We Partner with:</p>
-              <ul className="grid grid-cols-2 gap-x-4 w-[80%] mx-auto  mb-8">
+              <p className="mt-4 md:text-lg text-sm text-center">
+                We Partner with:
+              </p>
+              <ul className="grid grid-cols-2 md:w-full w-full mx-auto  md:mb-8 mb-2">
                 {[
                   "Accountants",
-                  "Advisors",
-                  "Bankers",
                   "Bookkeepers",
+                  "Advisors",
                   "Consultants",
+                  "Bankers",
                   "Tax-Strategists",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center mt-4">
@@ -52,24 +56,24 @@ const GrowthAllies = () => {
                         d="M9 12l2 2 4-4"
                       />
                     </svg>
-                    <span className="md:text-lg">{item}</span>
+                    <span className="md:text-lg text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
 
-              <p className="text-gray-200 italic text-md font-extralight mb-6 text-center">
+              <p className="text-gray-200 italic md:text-md sm:text-sm text-xs font-extralight mb-6 text-center">
                 Clients have needs. We have solutions.
                 <br /> At LendNav, we help you deliver more for your clients.
               </p>
               <div className="flex items-center justify-center mb-4">
-                <button className="bg-lendnow-gradient hover:bg-lendnow-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                <button className="bg-lendnow-gradient hover:bg-lendnow-600 md:text-md text-sm text-white px-4 py-2 rounded-lg font-medium transition-colors">
                   Partner With Us
                 </button>
               </div>
             </div>
           </div>
           {/* Right Image */}
-          <div className="lg:h-full lg:w-auto max-w-[500px]">
+          <div className="lg:h-full lg:w-auto md:max-w-[500px] max-w-[410px]">
             <img
               src={RightImage}
               alt="LendNav Lightbox Sign"

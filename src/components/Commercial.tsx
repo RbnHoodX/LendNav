@@ -7,7 +7,7 @@ const Commercial = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-20"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto p-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-center">
           {/* Image Section */}
           <div className="relative md:w-1/2 mb-8 md:mb-0">

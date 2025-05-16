@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useIsMobile } from "@/hooks/use-mobile";
+import { useBreakpoint } from "@/hooks/useBreakPoint";
 import Logo from "../assets/Logo.png";
 
 const NAV_ITEMS = [
@@ -16,7 +16,7 @@ const NAV_ITEMS = [
 ];
 
 const Navbar = () => {
-  const isMobile = useIsMobile();
+  const breakpoint = useBreakpoint();
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,34 +42,45 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 max-w-[700px] min-w-[700px]">
-          {NAV_ITEMS.map(({ label, href }) => (
-            <a
-              key={label}
-              href={href}
-              className="text-gray-900 hover:text-lendnow-600 transition-colors duration-200 text-[10px] md:text-sm lg:text-sm"
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
+        {window.innerWidth > 1100 && (
+          <>
+            <nav className="flex items-center gap-6 max-w-[700px] min-w-[700px]">
+              {NAV_ITEMS.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="text-gray-900 hover:text-lendnow-600 transition-colors duration-200 text-[10px] md:text-sm lg:text-sm"
+                >
+                  {label}
+                </a>
+              ))}
+            </nav>
 
-        <Button className="hidden md:flex bg-[#FF9494] hover:bg-lendnow-400 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-          Get Started
-        </Button>
+            <Button className="hidden md:flex bg-[#FF9494] hover:bg-lendnow-400 text-white px-5 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+              Get Started
+            </Button>
+          </>
+        )}
+
         {/* Mobile Menu Icon */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden focus:outline-none"
-          aria-label="Toggle mobile menu"
-        >
-          {menuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-        </button>
+        {window.innerWidth <= 1100 && (
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="focus:outline-none"
+            aria-label="Toggle mobile menu"
+          >
+            {menuOpen ? (
+              <X className="w-7 h-7" />
+            ) : (
+              <Menu className="w-7 h-7" />
+            )}
+          </button>
+        )}
       </div>
 
       {/* Mobile Drawer */}
       {menuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col px-6 pt-24 gap-6 items-center">
+        <div className="fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col px-6 pt-24 gap-6 items-center">
           {NAV_ITEMS.map(({ label, href }) => (
             <a
               key={label}

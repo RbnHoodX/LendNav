@@ -75,7 +75,7 @@ const Solutions = () => {
   return (
     <section
       id="solutions"
-      className="relative md:p-8 p-4 md:py-24 bg-[#FF9494] m-8 rounded-lg"
+      className="relative py-2 md:p-4 md:py-24 bg-[#FF9494] m-8 rounded-lg"
     >
       <img
         src={LogoBack}
@@ -87,7 +87,7 @@ const Solutions = () => {
         alt="Logo"
         className="absolute w-[200px] bottom-[0px] right-0 z-0"
       />
-      <div className="relative text-[#191919] px-16">
+      <div className="relative text-[#191919] md:px-16 lg:px-24 px-4">
         <div className="max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="text-center">
             <h2 className="md:text-3xl text-2xl md:text-4xl font-medium mb-4">
@@ -108,8 +108,8 @@ const Solutions = () => {
               className={`shadow-sm w-[400px] h-[400px] hover:shadow-md transition-shadow flex flex-col justify-between
               `}
             >
-              <div className="px-6 pt-8 mb-4">
-                <div className="flex items-center gap-2 mb-6">
+              <div className="lg:px-6 lg:pt-8 px-4 pt-4 lg:mb-2 mb-2">
+                <div className="flex items-center gap-2 lg:mb-2">
                   <img
                     src={solution.image}
                     alt={solution.title}
@@ -117,12 +117,15 @@ const Solutions = () => {
                   />
                   <h3 className="text-2xl font-bold">{solution.title}</h3>
                 </div>
+              </div>
+
+              <div className="lg:px-6 px-4 lg:mb-4 mb-2">
                 <p className="text-[14px] text-gray-800 font-medium">
                   {solution.description}
                 </p>
               </div>
-              <CardContent>
-                <ul className="space-y-3 mb-4">
+              <div className="lg:px-6 px-4 mb-2">
+                <ul className="space-y-3">
                   {solution.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <svg
@@ -138,15 +141,18 @@ const Solutions = () => {
                           d="M5 13l4 4L19 7"
                         />
                       </svg>
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <span className="md:text-sm text-xs text-gray-700">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
-
+              </div>
+              <div className="flex items-center justify-between px-4 mb-2">
                 <p className="border-l-[3px] italic text-xs leading-6 font-semibold pl-2 border-[#FF9494] text-gray-600">
                   {solution.idealFor}
                 </p>
-              </CardContent>
+              </div>
               <CardFooter className="pt-0">
                 <Button className="w-2/3 mx-auto bg-[#191919] hover:bg-[#292929]">
                   Apply Now
