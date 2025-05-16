@@ -47,7 +47,7 @@ const FAQ = () => {
         <div className="flex md:flex-row flex-col gap-8 items-start justify-center">
           {/* Left Section */}
           <div className="flex flex-col justify-center max-w-md">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4 leading-tight">
               Frequently asked questions
             </h2>
             <p className="text-gray-600 text-base mb-6">

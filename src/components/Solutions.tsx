@@ -101,7 +101,7 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="w-full flex flex-wrap gap-4 justify-center">
+        <div className="w-full flex flex-wrap lg:px-16 gap-4 justify-center">
           {solutionsData.map((solution, index) => (
             <Card
               key={solution.id}
@@ -114,7 +114,9 @@ const Solutions = () => {
                     alt={solution.title}
                     className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-sm"
                   />
-                  <h3 className="text-xl md:text-2xl font-bold">{solution.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold">
+                    {solution.title}
+                  </h3>
                 </div>
               </div>
 
@@ -151,7 +153,7 @@ const Solutions = () => {
                 <p className="border-l-[3px] italic text-xs leading-6 font-semibold pl-2 border-[#FF9494] text-gray-600">
                   {solution.idealFor}
                 </p>
-              </CardContent>
+              </div>
               <CardFooter className="pt-0">
                 <Button className="w-2/3 mx-auto bg-[#191919] hover:bg-[#292929]">
                   Apply Now

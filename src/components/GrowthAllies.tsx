@@ -10,7 +10,7 @@ const GrowthAllies = () => {
         {/* First Row: Two columns */}
         <div className="flex lg:flex-row flex-wrap gap-2 items-center justify-center">
           {/* Left Card */}
-          <div className="relative bg-[#191919] p-8 rounded-2xl text-white max-w-[500px] max-h-[500px] ">
+          <div className="relative bg-[#191919] p-16 rounded-2xl text-white max-w-[500px] max-h-[500px] ">
             <img
               src={Curve}
               alt="Logo"
