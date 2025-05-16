@@ -3,7 +3,7 @@ import NavCom from "../assets/nav_com.png";
 
 const Commercial = () => {
   return (
-    <section className="py-4 md:py-8 bg-[#2f2f2f] text-white relative overflow-hidden md:m-16 m-8 rounded-lg">
+    <section className="py-4 md:py-8 bg-[#2f2f2f] text-white relative overflow-hidden mx-4 md:m-16 rounded-lg">
       {/* Background image with overlay */}
       <div className="absolute inset-0 bg-cover bg-center opacity-20"></div>
 
@@ -14,7 +14,7 @@ const Commercial = () => {
             <img
               src={BuildingImage}
               alt="Commercial Building"
-              className="w-[32] h-[32]"
+              className="w-full h-auto md:w-[32] md:h-[32]"
             />
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#2f2f2f] to-transparent pointer-events-none" />
           </div>
@@ -36,12 +36,12 @@ const Commercial = () => {
             </h2>
 
             <div className="space-y-4 mt-2">
-              <p className="text-gray-300 text-md font-medium">
+              <p className="text-gray-300 text-sm md:text-md font-medium">
                 From storefronts to investment properties, our commercial loan
                 options make ownership accessible and strategic
               </p>
 
-              <ul className="space-y-3 ">
+              <ul className="space-y-3">
                 {[
                   <div>
                     Owner-occupied purchases <b>w/ no tax returns</b>
@@ -73,7 +73,7 @@ const Commercial = () => {
                 ))}
               </ul>
               <div className="flex items-center justify-center mt-4 lg:pt-8">
-                <button className="px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center">
+                <button className="w-full md:w-auto px-4 py-2 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
                   Apply Now
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

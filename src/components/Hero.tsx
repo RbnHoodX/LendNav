@@ -17,25 +17,25 @@ const Hero = () => {
             <img
               src={LogoBack}
               alt="Logo background"
-              className="absolute sm:top-16 sm:left-8 left-16 sm:w-[90%] h-full sm:h-auto z-0 pointer-events-none"
+              className="absolute sm:top-16 sm:left-8 left-16 sm:w-[90%] h-full sm:h-auto z-0 pointer-events-none opacity-20 md:opacity-100"
             />
             <div className="relative z-10 max-w-xl">
               <div className="inline-block mb-6 px-4 py-1.5 bg-[#FF9494] text-white rounded-[10px] text-sm font-medium">
                 navigating lending, together.
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-                Funding That’s <br></br>
+              <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                Funding That's <br></br>
                 <span className="text-transparent bg-clip-text bg-lendnow-gradient">
                   Creative
                 </span>{" "}
                 & Quick for Your Business
               </h1>
-              <p className="text-base text-gray-800 mb-6">
+              <p className="text-sm md:text-base text-gray-800 mb-6">
                 LendNav provides lending solutions that match your unique
                 business personality. Compare rates, explore options, and find
                 financing that's as individual as you are.
               </p>
-              <Button className="bg-[#FF9494] hover:bg-lendnow-400 text-white font-medium px-6 py-2 rounded-lg inline-flex items-center gap-2">
+              <Button className="bg-[#FF9494] hover:bg-lendnow-400 text-white font-medium px-6 py-2 rounded-lg inline-flex items-center gap-2 w-full md:w-auto justify-center">
                 Apply Now
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Hero = () => {
 
           {/* Image Content */}
           <div className="flex-1 flex flex-col justify-center animate-fade-in animated-delay-2">
-            <div className="w-full max-w-[600px] mx-auto">
+            <div className="w-full max-w-[600px] mx-auto px-4 md:px-0">
               <div className="w-full mb-5">
                 <img
                   src={HeroCard1}

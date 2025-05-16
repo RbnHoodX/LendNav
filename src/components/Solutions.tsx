@@ -75,47 +75,46 @@ const Solutions = () => {
   return (
     <section
       id="solutions"
-      className="relative py-2 md:p-4 md:py-24 bg-[#FF9494] m-8 rounded-lg"
+      className="relative md:p-8 p-4 md:py-24 bg-[#FF9494] m-8 rounded-lg"
     >
       <img
         src={LogoBack}
         alt="Logo"
-        className="absolute w-[400px] top-[5vw] left-[-8px] z-0"
+        className="absolute w-[400px] top-[5vw] left-[-8px] z-0 opacity-30 md:opacity-100"
       />
       <img
         src={LogoBottom}
         alt="Logo"
-        className="absolute w-[200px] bottom-[0px] right-0 z-0"
+        className="absolute w-[200px] bottom-[0px] right-0 z-0 opacity-30 md:opacity-100"
       />
-      <div className="relative text-[#191919] md:px-16 lg:px-24 px-4">
+      <div className="relative text-[#191919] px-16">
         <div className="max-w-3xl mx-auto mb-12 md:mb-16">
           <div className="text-center">
             <h2 className="md:text-3xl text-2xl md:text-4xl font-medium mb-4">
               Business financing solutions
             </h2>
           </div>
-          <p className="text-md md:text-center text-gray-800 md:px-16">
+          <p className="text-sm md:text-md md:text-center text-gray-800 md:px-16">
             Discover our suite of LendNav products - specialized alternative
             lending solutions designed for businesses and individuals who don't
             fit traditional financing models
           </p>
         </div>
 
-        <div className="w-full flex flex-wrap gap-x-4 gap-y-4 justify-center">
+        <div className="w-full flex flex-wrap gap-4 justify-center">
           {solutionsData.map((solution, index) => (
             <Card
               key={solution.id}
-              className={`shadow-sm w-[400px] h-[400px] hover:shadow-md transition-shadow flex flex-col justify-between
-              `}
+              className="shadow-sm w-full md:w-[400px] h-auto md:h-[400px] hover:shadow-md transition-shadow flex flex-col justify-between"
             >
-              <div className="lg:px-6 lg:pt-8 px-4 pt-4 lg:mb-2 mb-2">
-                <div className="flex items-center gap-2 lg:mb-2">
+              <div className="px-6 pt-8 mb-4">
+                <div className="flex items-center gap-2 mb-6">
                   <img
                     src={solution.image}
                     alt={solution.title}
-                    className="w-12 h-12 object-cover rounded-sm"
+                    className="w-10 h-10 md:w-12 md:h-12 object-cover rounded-sm"
                   />
-                  <h3 className="text-2xl font-bold">{solution.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold">{solution.title}</h3>
                 </div>
               </div>
 
@@ -152,7 +151,7 @@ const Solutions = () => {
                 <p className="border-l-[3px] italic text-xs leading-6 font-semibold pl-2 border-[#FF9494] text-gray-600">
                   {solution.idealFor}
                 </p>
-              </div>
+              </CardContent>
               <CardFooter className="pt-0">
                 <Button className="w-2/3 mx-auto bg-[#191919] hover:bg-[#292929]">
                   Apply Now
